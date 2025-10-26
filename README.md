@@ -34,23 +34,23 @@ This pricing framework is built to mimic real-world BTC option markets (such as 
 ## Model Overview
 
 ### Price Dynamics (Geometric Brownian Motion)
-\[
+$$
 dS_t = rS_t dt + \sigma S_t dW_t
-\]
-\[
+$$
+$$
 S_{t+\Delta t} = S_t \cdot \exp\left( \left(r - \frac{1}{2}\sigma^2\right)\Delta t + \sigma \sqrt{\Delta t} Z \right)
-\]
+$$
 
 ### Monte Carlo Option Pricing
-\[
+$$
 C_0 = e^{-rT} \cdot \mathbb{E}[\max(S_T - K, 0)]
-\]
+$$
 
 ### Implied Volatility Estimation
 - Initial guess via Brenner & Subrahmanyam:
-  \[
+  $$
   \sigma \approx \sqrt{2\pi} \cdot \frac{C_mkt}{S \sqrt{T}}
-  \]
+  $$
 - Refined using Newton–Raphson until convergence.
 
 ---
