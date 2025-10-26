@@ -46,11 +46,10 @@ $$
 C_0 = e^{-rT} \cdot \mathbb{E}[\max(S_T - K, 0)]
 $$
 
-### Implied Volatility Estimation
-- Initial guess via Brenner & Subrahmanyam:
-  $$
-  \sigma \approx \sqrt{2\pi} \cdot \frac{C_mkt}{S \sqrt{T}}
-  $$
+## Implied Volatility Estimation
+
+- Initial guess via Brenner & Subrahmanyam: $\sigma \approx \sqrt{2\pi} \cdot \frac{C_{mkt}}{S \sqrt{T}}$
+
 - Refined using Newton–Raphson until convergence.
 
 ---
